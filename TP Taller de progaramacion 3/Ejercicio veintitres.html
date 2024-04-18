@@ -1,0 +1,30 @@
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pirámide del 1 al 30</title>
+</head>
+<body>
+<script>
+// Función para escribir la pirámide del 1 al 30
+function escribirPiramide() {
+    var piramide = "";
+    
+    // Bucle para iterar sobre los números del 1 al 30
+    for (var i = 1; i <= 30; i++) {
+        // Bucle para escribir cada número 'i' veces
+        for (var j = 1; j <= i; j++) {
+            piramide += i; // Añadir el número actual a la pirámide
+        }
+        piramide += "<br>"; // Salto de línea después de cada fila
+    }
+    
+    // Mostrar la pirámide en el cuerpo del documento HTML
+    document.body.innerHTML = piramide;
+}
+
+// Llamar a la función para generar la pirámide al cargar la página
+escribirPiramide();
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pirámide Inversa</title>
+</head>
+<body>
+<script>
+    function generarPiramideInversa(numero) {
+        let piramide = '';
+        for (let i = numero; i >= 1; i--) {
+            piramide += `${String(i).repeat(i)}<br>`;
+        }
+        document.body.innerHTML = piramide;
+    }
+
+    function generarPiramide() {
+        const numero = parseInt(prompt("Por favor, introduce un número entero:"));
+        if (!isNaN(numero) && numero > 0) {
+            generarPiramideInversa(numero);
+        } else {
+            alert("Por favor, introduce un número entero válido y mayor que 0.");
+        }
+       
+    }
+
+    generarPiramide();
+</script>
+<div id="resultado"></div>
+</body>
+</html>
